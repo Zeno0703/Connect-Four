@@ -1,14 +1,53 @@
+body {
+    /*background-color: rgb(230, 242, 255);*/
+}
+
 table {
     margin: auto;
-    background-color: blue;
-    border: 2px solid darkblue;
-    border-radius: 15px;
+    background-color: rgb(0, 81, 255);
+    border-radius: 20px;
     height: 600px;
     width: 700px;
+    box-shadow: 0px 5px 35px 10px rgb(163, 184, 207);
 }
 
 td {
     text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(0, 81, 255);
+    text-shadow: 0px 1px 3px rgb(163, 184, 207);
+}
+
+.redO {
+    height: 23px;
+    width: 23px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0px 1px 3px rgb(163, 184, 207);
+    transition: all .4s ease-in-out;
+  }
+
+.redO:hover {
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.yellowO {
+    height: 23px;
+    width: 23px;
+    background-color: rgb(255, 238, 0);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0px 1px 3px rgb(163, 184, 207);
+    transition: all .4s ease-in-out;
+  }
+
+.yellowO:hover {
+    transform: rotate3d(1, 0, 0, 180deg);
 }
 
 .empty {
@@ -17,11 +56,12 @@ td {
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
     display: inline-block;
+    box-shadow: inset 0px 0px 10px 3px rgb(143, 166, 190);
     transition: all .2s ease-in-out;
   }
 
 .empty:hover{
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(180, 206, 233);
     transform: scale(1.05);
 }
 
@@ -29,7 +69,7 @@ td {
     height: 75px;
     width: 75px;
     background-color: rgb(255, 0, 0);
-    border: 1px solid rgb(230, 0, 0);
+    box-shadow: inset 0px 0px 10px 3px rgb(180, 0, 0);
     border-radius: 50%;
     display: inline-block;
     transition: all .2s ease-in-out;
@@ -43,7 +83,7 @@ td {
     height: 75px;
     width: 75px;
     background-color: rgb(255, 255, 0);
-    border: 1px solid rgb(230, 230, 0);
+    box-shadow: inset 0px 0px 10px 3px rgb(168, 168, 0);
     border-radius: 50%;
     display: inline-block;
     transition: all .2s ease-in-out;
