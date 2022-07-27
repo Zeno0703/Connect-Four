@@ -57,6 +57,20 @@ td {
   }
 
 .empty:hover{
+    transform: scale(1.05);
+}
+
+.possibility {
+    height: 75px;
+    width: 75px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: inset 0px 0px 10px 3px rgb(143, 166, 190);
+    transition: all .2s ease-in-out;
+  }
+
+.possibility:hover{
     background-color: rgb(180, 206, 233);
     transform: scale(1.05);
 }
