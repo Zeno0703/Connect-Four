@@ -65,6 +65,7 @@ function clickHandler(cell){
         if (turn == 2) alert("Red wins!");
         else alert("Yellow wins!");
     }
+    updateTurn();
 }
 
 function placeCoin(field, row, col){
@@ -185,4 +186,42 @@ function checkBottomRight(field, row, col){
         else return false;
     }
     else return false;
+}
+
+function updateTurn(){
+    let turnHTML = document.getElementById("current_turn");
+    if (turn == 1){
+        turnHTML.innerHTML = "<span class=red_turn></span>";
+    }
+    else if (turn == 2){
+        turnHTML.innerHTML = "<span class=yellow_turn></span>";
+    }
+}
+
+function reset(){
+    connectField = [[0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0], 
+                    [0, 0, 0, 0, 0, 0, 0], 
+                    [0, 0, 0, 0, 0, 0, 0], 
+                    [3, 3, 3, 3, 3, 3, 3]];
+    
+    turn = 1;
+    drawField(connectField);
+    updateTurn();
+    totalSeconds = 0;
+}
+
+let changeTimer = setInterval(timer, 1000);                                 // iedere duizend milliseconden wordt de functie timer() opnieuw doorlopen.
+let totalSeconds = 0;
+
+function timer() {
+    totalSeconds += 1;
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds - (minutes * 60);
+    if (minutes < 10)
+        minutes = "0" + minutes;
+    if (seconds < 10)
+        seconds = "0" + seconds;
+    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 }
